@@ -1,0 +1,50 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AthenaWorkgroupYGlueExamenFinal",
+      "Effect": "Allow",
+      "Action": [
+        "athena:CreateWorkGroup",
+        "athena:DeleteWorkGroup",
+        "athena:UpdateWorkGroup",
+        "athena:GetWorkGroup",
+        "athena:ListWorkGroups",
+        "athena:TagResource",
+        "athena:UntagResource",
+        "athena:ListTagsForResource",
+        "athena:StartQueryExecution",
+        "athena:GetQueryExecution",
+        "athena:GetQueryResults",
+        "glue:GetTags",
+        "glue:TagResource",
+        "glue:UntagResource",
+        "glue:UpdateDatabase"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3ExamenFinalVaciarYBorrar",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:ListBucketVersions",
+        "s3:ListBucketMultipartUploads",
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject",
+        "s3:DeleteObjectVersion",
+        "s3:AbortMultipartUpload",
+        "s3:GetObjectTagging",
+        "s3:PutObjectTagging",
+        "s3:DeleteObjectTagging",
+        "s3:GetObjectVersion",
+        "s3:GetObjectVersionTagging"
+      ],
+      "Resource": [
+        "arn:aws:s3:::de-aws-*",
+        "arn:aws:s3:::de-aws-*/*"
+      ]
+    }
+  ]
+}

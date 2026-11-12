@@ -1,0 +1,8 @@
+data.aws_caller_identity.actual
+aws_athena_workgroup.entregas
+aws_glue_catalog_database.entregas
+aws_glue_catalog_table.entregas
+aws_s3_bucket.datos
+aws_s3_bucket_public_access_block.datos
+aws_s3_object.prefijo_datos
+aws_s3_object.prefijo_resultados

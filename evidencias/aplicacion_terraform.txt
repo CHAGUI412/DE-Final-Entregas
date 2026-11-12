@@ -1,0 +1,83 @@
+data.aws_caller_identity.actual: Reading...
+aws_glue_catalog_database.entregas: Refreshing state... [id=097040011792:examen_entregas]
+data.aws_caller_identity.actual: Read complete after 0s [id=097040011792]
+aws_s3_bucket.datos: Refreshing state... [id=de-aws-examen-entregas-097040011792]
+aws_s3_bucket_public_access_block.datos: Refreshing state... [id=de-aws-examen-entregas-097040011792]
+aws_s3_object.prefijo_datos: Refreshing state... [id=entregas/]
+aws_athena_workgroup.entregas: Refreshing state... [id=examen-entregas]
+aws_s3_object.prefijo_resultados: Refreshing state... [id=resultados-athena/]
+aws_glue_catalog_table.entregas: Refreshing state... [id=097040011792:examen_entregas:entregas]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # aws_s3_object.prefijo_datos is tainted, so must be replaced
+-/+ resource "aws_s3_object" "prefijo_datos" {
+      + acl                           = (known after apply)
+      ~ arn                           = "arn:aws:s3:::de-aws-examen-entregas-097040011792/entregas/" -> (known after apply)
+      ~ bucket_key_enabled            = false -> (known after apply)
+      + checksum_crc32                = (known after apply)
+      + checksum_crc32c               = (known after apply)
+      + checksum_crc64nvme            = (known after apply)
+      + checksum_sha1                 = (known after apply)
+      + checksum_sha256               = (known after apply)
+      ~ content_type                  = "application/octet-stream" -> (known after apply)
+      ~ etag                          = "d41d8cd98f00b204e9800998ecf8427e" -> (known after apply)
+      ~ id                            = "entregas/" -> (known after apply)
+      + kms_key_id                    = (known after apply)
+      - metadata                      = {} -> null
+      ~ server_side_encryption        = "AES256" -> (known after apply)
+      ~ storage_class                 = "STANDARD" -> (known after apply)
+      - tags                          = {} -> null
+      ~ tags_all                      = {} -> (known after apply)
+      + version_id                    = (known after apply)
+        # (12 unchanged attributes hidden)
+    }
+
+  # aws_s3_object.prefijo_resultados is tainted, so must be replaced
+-/+ resource "aws_s3_object" "prefijo_resultados" {
+      + acl                           = (known after apply)
+      ~ arn                           = "arn:aws:s3:::de-aws-examen-entregas-097040011792/resultados-athena/" -> (known after apply)
+      ~ bucket_key_enabled            = false -> (known after apply)
+      + checksum_crc32                = (known after apply)
+      + checksum_crc32c               = (known after apply)
+      + checksum_crc64nvme            = (known after apply)
+      + checksum_sha1                 = (known after apply)
+      + checksum_sha256               = (known after apply)
+      ~ content_type                  = "application/octet-stream" -> (known after apply)
+      ~ etag                          = "d41d8cd98f00b204e9800998ecf8427e" -> (known after apply)
+      ~ id                            = "resultados-athena/" -> (known after apply)
+      + kms_key_id                    = (known after apply)
+      - metadata                      = {} -> null
+      ~ server_side_encryption        = "AES256" -> (known after apply)
+      ~ storage_class                 = "STANDARD" -> (known after apply)
+      - tags                          = {} -> null
+      ~ tags_all                      = {} -> (known after apply)
+      + version_id                    = (known after apply)
+        # (12 unchanged attributes hidden)
+    }
+
+Plan: 2 to add, 0 to change, 2 to destroy.
+aws_s3_object.prefijo_resultados: Destroying... [id=resultados-athena/]
+aws_s3_object.prefijo_datos: Destroying... [id=entregas/]
+aws_s3_object.prefijo_datos: Destruction complete after 1s
+aws_s3_object.prefijo_resultados: Destruction complete after 1s
+aws_s3_object.prefijo_resultados: Creating...
+aws_s3_object.prefijo_datos: Creating...
+aws_s3_object.prefijo_resultados: Creation complete after 0s [id=resultados-athena/]
+aws_s3_object.prefijo_datos: Creation complete after 0s [id=entregas/]
+
+Apply complete! Resources: 2 added, 0 changed, 2 destroyed.
+
+Outputs:
+
+base_datos = "examen_entregas"
+bucket = "de-aws-examen-entregas-097040011792"
+region = "us-east-1"
+tabla = "entregas"
+ubicacion_datos = "s3://de-aws-examen-entregas-097040011792/entregas/"
+ubicacion_resultados = "s3://de-aws-examen-entregas-097040011792/resultados-athena/"
+workgroup = "examen-entregas"

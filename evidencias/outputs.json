@@ -1,0 +1,37 @@
+{
+  "base_datos": {
+    "sensitive": false,
+    "type": "string",
+    "value": "examen_entregas"
+  },
+  "bucket": {
+    "sensitive": false,
+    "type": "string",
+    "value": "de-aws-examen-entregas-097040011792"
+  },
+  "region": {
+    "sensitive": false,
+    "type": "string",
+    "value": "us-east-1"
+  },
+  "tabla": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas"
+  },
+  "ubicacion_datos": {
+    "sensitive": false,
+    "type": "string",
+    "value": "s3://de-aws-examen-entregas-097040011792/entregas/"
+  },
+  "ubicacion_resultados": {
+    "sensitive": false,
+    "type": "string",
+    "value": "s3://de-aws-examen-entregas-097040011792/resultados-athena/"
+  },
+  "workgroup": {
+    "sensitive": false,
+    "type": "string",
+    "value": "examen-entregas"
+  }
+}

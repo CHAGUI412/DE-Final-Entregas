@@ -1,0 +1,13 @@
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+.terraform.lock.hcl.bak
+
+# credenciales
+.env
+*.pem
+.aws/
+credentials
